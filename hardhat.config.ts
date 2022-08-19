@@ -13,10 +13,13 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY] as HttpNetworkAccountsUserConfig | undefined,
     },
     rinkeby: {
-      url: process.env.GOERLI_URL,
+      url: process.env.RINKEBY_URL,
       accounts: [process.env.PRIVATE_KEY] as HttpNetworkAccountsUserConfig | undefined,
     }
   },
+  etherscan: {
+    apiKey: process.env.ETHERSCAN_KEY
+  }
 };
 
 export default config;
